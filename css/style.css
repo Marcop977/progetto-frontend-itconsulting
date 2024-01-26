@@ -39,4 +39,15 @@
     color: #ffffff86!important;
 }
 
+#map {
+    width: 100%;
+    height: 20vh;
+}
 
+.slide2 {
+    height: 100px!important;
+}
+
+/* .relative {
+    position: relative!important;
+} */
