@@ -1,5 +1,17 @@
-.overlay::before{
-    content:'';
+html,
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    /* position: relative; */
+    height: 100%;
+
+}
+
+.overlay::before {
+    content: '';
     position: absolute;
     border-radius: 5px;
     top: 0;
@@ -10,8 +22,8 @@
     cursor: pointer;
 }
 
-.overlay2::before{
-    content:'';
+.overlay2::before {
+    content: '';
     position: absolute;
     border-radius: 5px;
     top: 0;
@@ -36,7 +48,7 @@
 }
 
 ::placeholder {
-    color: #ffffff86!important;
+    color: #ffffff86 !important;
 }
 
 #map {
@@ -45,9 +57,27 @@
 }
 
 .slide2 {
-    height: 100px!important;
+    height: 100px !important;
 }
 
-/* .relative {
-    position: relative!important;
-} */
+
+#swiper-2 {
+    width: 75%;
+    height: 20%;
+}
+
+#swiper-2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#swiper-2 .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
