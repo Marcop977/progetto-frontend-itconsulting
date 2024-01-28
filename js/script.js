@@ -1,7 +1,8 @@
+// primo swiper
 new Swiper("#swiper-1", {
-  autoplay: {
-    delay: 4000,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  // },
   pagination: {
     el: "#swiper-1 .swiper-pagination",
     clickable: true,
@@ -11,6 +12,7 @@ new Swiper("#swiper-1", {
 
 const map = L.map("map").setView([45.4615149, 9.1828855], 15);
 
+// mappa
 const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -56,6 +58,8 @@ L.marker([45.4615149, 9.1828855], { icon: myIcon }).addTo(map);
 //       })(),
 //     },
 // });
+
+// secondo swiper
 new Swiper("#swiper-2", {
   slidesPerView: 6,
   spaceBetween: 20,
@@ -64,12 +68,13 @@ new Swiper("#swiper-2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  autoplay: {
-    delay: 4700,
-  },
+  // autoplay: {
+  //   delay: 4700,
+  // },
   loop: true,
 });
 
+// countdown
 let countDownDate = new Date("5 Feb, 2024 00:00:00").getTime();
 setInterval(function () {
   let now = new Date().getTime();
@@ -118,6 +123,7 @@ setInterval(function () {
   document.querySelector("#seconds3").innerHTML = seconds;
 }, 1000);
 
+// bordo colorato
 const bordoColorato = document.querySelectorAll(".bordo-colorato");
 
 bordoColorato.forEach((element) => {
@@ -129,15 +135,16 @@ bordoColorato.forEach((element) => {
   });
 });
 
-const bordoColorato2 = document.querySelectorAll(".bordo-colorato2");
+// overlay sconti
+const scuro = document.querySelectorAll(".scuro");
 
-bordoColorato2.forEach((element) => {
+scuro.forEach((element) => {
   element.addEventListener("mouseover", function () {
-    element.classList.add("border-success");
     element.classList.add("overlay");
+    element.style.cursor = "pointer";
   });
   element.addEventListener("mouseout", function () {
-    element.classList.remove("border-success");
     element.classList.remove("overlay");
+    element.style.cursor = "auto";
   });
 });

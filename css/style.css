@@ -93,3 +93,85 @@ body {
     left: 81%;
     visibility: hidden;
 }
+
+@media (max-width: 1395px) {
+    .responsive-img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .responsive {
+        width: 50% !important;
+    }
+
+    .responsive2 {
+        width: 33% !important;
+    }
+
+    .responsive3 {
+        margin-top: 40px;
+    }
+
+    .responsive-button {
+        width: 30% !important;
+    }
+
+    .responsive-title {
+        font-size: 30px !important;
+    }
+
+    .responsive-img {
+        height: 528.5px;
+    }
+}
+
+@media (max-width: 990px) {
+    .responsive-title {
+        font-size: 20px !important;
+    }
+
+    .responsive-text {
+        font-size: 14px !important;
+    }
+
+    .responsive-warning {
+        width: 70% !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .responsive-img {
+        height: 457px;
+    }
+
+}
+
+
+@media (max-width: 766px) {
+    .responsive {
+        width: 100% !important;
+    }
+
+    .responsive4 {
+        margin-top: 40px;
+    }
+
+    .responsive-title {
+        display: none;
+    }
+
+    .responsive-text {
+        display: none;
+    }
+
+    .responsive-warning {
+        width: 110% !important;
+    }
+
+    .responsive-img {
+        height: auto;
+    }
+}
