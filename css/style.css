@@ -84,10 +84,12 @@ body {
 
 .change-position-prev {
     top: 60%;
-    left: 80%;
+    left: 78.7%;
+    visibility: hidden;
 }
 
 .change-position-next {
     top: 60%;
-    left: 85%;
+    left: 81%;
+    visibility: hidden;
 }

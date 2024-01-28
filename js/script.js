@@ -1,11 +1,12 @@
 new Swiper("#swiper-1", {
-  // autoplay: {
-  //   delay: 2500,
-  // },
+  autoplay: {
+    delay: 4000,
+  },
   pagination: {
     el: "#swiper-1 .swiper-pagination",
     clickable: true,
   },
+  loop: true,
 });
 
 const map = L.map("map").setView([45.4615149, 9.1828855], 15);
@@ -63,14 +64,14 @@ new Swiper("#swiper-2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // autoplay: {
-  //   delay: 2900,
-  // },
+  autoplay: {
+    delay: 4700,
+  },
   loop: true,
 });
 
 let countDownDate = new Date("5 Feb, 2024 00:00:00").getTime();
-let x = setInterval(function () {
+setInterval(function () {
   let now = new Date().getTime();
   let distance = countDownDate - now;
 
@@ -85,6 +86,38 @@ let x = setInterval(function () {
   document.querySelector("#seconds").innerHTML = seconds;
 }, 1000);
 
+let countDownDate2 = new Date("6 Feb, 2024 00:00:00").getTime();
+setInterval(function () {
+  let now = new Date().getTime();
+  let distance = countDownDate - now;
+
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.querySelector("#days2").innerHTML = days;
+  document.querySelector("#hours2").innerHTML = hours;
+  document.querySelector("#minutes2").innerHTML = minutes;
+  document.querySelector("#seconds2").innerHTML = seconds;
+}, 1000);
+
+let countDownDate3 = new Date("7 Feb, 2024 00:00:00").getTime();
+setInterval(function () {
+  let now = new Date().getTime();
+  let distance = countDownDate - now;
+
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.querySelector("#days3").innerHTML = days;
+  document.querySelector("#hours3").innerHTML = hours;
+  document.querySelector("#minutes3").innerHTML = minutes;
+  document.querySelector("#seconds3").innerHTML = seconds;
+}, 1000);
+
 const bordoColorato = document.querySelectorAll(".bordo-colorato");
 
 bordoColorato.forEach((element) => {
@@ -93,5 +126,18 @@ bordoColorato.forEach((element) => {
   });
   element.addEventListener("mouseout", function () {
     element.classList.remove("border-success");
+  });
+});
+
+const bordoColorato2 = document.querySelectorAll(".bordo-colorato2");
+
+bordoColorato2.forEach((element) => {
+  element.addEventListener("mouseover", function () {
+    element.classList.add("border-success");
+    element.classList.add("overlay");
+  });
+  element.addEventListener("mouseout", function () {
+    element.classList.remove("border-success");
+    element.classList.remove("overlay");
   });
 });

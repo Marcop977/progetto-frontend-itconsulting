@@ -23,6 +23,13 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
@@ -201,14 +208,20 @@
     </section> -->
 
     <!-- secondo swiper -->
-    <div class="container pt-5 mt-4">
+    <div class="container pt-5 mt-4 pb-4">
       <h3>Featured Categories</h3>
-      <div
-        class="swiper-button-next change-position-next bg-light rounded-circle p-5 text-secondary"
-      ></div>
-      <div
-        class="swiper-button-prev change-position-prev bg-light rounded-circle p-5 text-secondary"
-      ></div>
+      <div class="swiper-button-next change-position-next">
+        <i
+          class="fa-solid fa-angle-right fs-5 text-secondary p-3 rounded-circle bg-light"
+          style="visibility: visible"
+        ></i>
+      </div>
+      <div class="swiper-button-prev change-position-prev">
+        <i
+          class="fa-solid fa-angle-left fs-5 text-secondary p-3 rounded-circle bg-light"
+          style="visibility: visible"
+        ></i>
+      </div>
     </div>
     <div class="swiper mb-5 container" id="swiper-2">
       <div class="swiper-wrapper" style="height: 90%">
@@ -321,16 +334,89 @@
     </section>
 
     <!-- griglia prodotti -->
-    <section class="py-5">
+    <section class="py-5 mb-5">
       <div class="container mt-5">
-        <h3 class="mb-4">Popular Products</h3>
+        <h3 class="pb-4">Popular Products</h3>
         <div class="row justify-content-center">
           <div class="col-md-2 mb-5">
+            <a href="" style="text-decoration: none">
+              <div class="card shadow bordo-colorato2">
+                <div class="card-body">
+                  <img
+                    class="w-100"
+                    src="./img/product-img-1.jpg"
+                    alt="Title"
+                  />
+                  <h4 class="card-title">Title</h4>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <button type="button" class="btn btn-success py-1">
+                        + Add
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-2 mb-5">
+            <a href="" style="text-decoration: none">
+              <div class="card shadow bordo-colorato2">
+                <div class="card-body">
+                  <img
+                    class="w-100"
+                    src="./img/product-img-2.jpg"
+                    alt="Title"
+                  />
+                  <h4 class="card-title">Title</h4>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <button type="button" class="btn btn-success py-1">
+                        + Add
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-2 mb-5">
             <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
               <div class="card-body">
+                <img class="w-100" src="./img/product-img-3.jpg" alt="Title" />
                 <h4 class="card-title">Title</h4>
-
                 <small class="text-warning">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -340,7 +426,7 @@
                   <span class="text-muted small">4.5(149)</span>
                 </small>
                 <div
-                  class="d-flex h-100 justify-content-between align-items-center"
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
                 >
                   <div>
                     <span class="text-dark">$18</span>
@@ -349,7 +435,9 @@
                     >
                   </div>
                   <div>
-                    <button type="button" class="btn btn-primary">+ Add</button>
+                    <button type="button" class="btn btn-success py-1">
+                      + Add
+                    </button>
                   </div>
                 </div>
               </div>
@@ -357,102 +445,282 @@
           </div>
           <div class="col-md-2 mb-5">
             <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
               <div class="card-body">
+                <img class="w-100" src="./img/product-img-4.jpg" alt="Title" />
                 <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 mb-5">
-            <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-              <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 mb-5">
-            <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-              <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-2 mb-5">
-            <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-              <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 mb-5">
-            <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-              <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 mb-5">
-            <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-              <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 mb-5">
-            <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-              <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-md-2 mb-5">
             <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
               <div class="card-body">
+                <img class="w-100" src="./img/product-img-5.jpg" alt="Title" />
                 <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-md-2 mb-5">
             <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
               <div class="card-body">
+                <img class="w-100" src="./img/product-img-6.jpg" alt="Title" />
                 <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-md-2 mb-5">
             <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
               <div class="card-body">
+                <img class="w-100" src="./img/product-img-7.jpg" alt="Title" />
                 <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-md-2 mb-5">
             <div class="card shadow">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
               <div class="card-body">
+                <img class="w-100" src="./img/product-img-8.jpg" alt="Title" />
                 <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 mb-5">
+            <div class="card shadow">
+              <div class="card-body">
+                <img class="w-100" src="./img/product-img-9.jpg" alt="Title" />
+                <h4 class="card-title">Title</h4>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-5">
+            <div class="card shadow">
+              <div class="card-body">
+                <img class="w-100" src="./img/product-img-10.jpg" alt="Title" />
+                <h4 class="card-title">Title</h4>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-5">
+            <div class="card shadow">
+              <div class="card-body">
+                <img class="w-100" src="./img/product-img-11.jpg" alt="Title" />
+                <h4 class="card-title">Title</h4>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 mb-5">
+            <div class="card shadow">
+              <div class="card-body">
+                <img class="w-100" src="./img/product-img-12.jpg" alt="Title" />
+                <h4 class="card-title">Title</h4>
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="text-muted small">4.5(149)</span>
+                </small>
+                <div
+                  class="d-flex h-100 justify-content-between align-items-center pt-2"
+                >
+                  <div>
+                    <span class="text-dark">$18</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$24</span
+                    >
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary py-1">
+                      + Add
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -461,9 +729,9 @@
     </section>
 
     <!-- daily offers -->
-    <section id="daily-offers" class="pb-5">
+    <section id="daily-offers" class="pb-5" style="margin-bottom: 80px">
       <div class="container">
-        <h3>Daily best offers</h3>
+        <h3 class="pb-4">Daily best offers</h3>
         <div class="row">
           <div class="col-md-3">
             <img class="w-100 rounded-4" src="./img/daily.jpeg" alt="" />
@@ -499,7 +767,7 @@
                 <button type="button" class="btn btn-success w-100 p-2 my-3">
                   + Add to cart
                 </button>
-                <div class="container" style="padding: 11px">
+                <div class="container" style="padding: 11.5px">
                   <div class="row gap-2 justify-content-center">
                     <div
                       class="col-2 border d-flex flex-wrap justify-content-center align-items-center"
@@ -541,24 +809,146 @@
           </div>
           <div class="col-md-3">
             <div class="card">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
               <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+                <div class="text-center">
+                  <img
+                    class="w-75"
+                    src="./img/daily-offers1.jpeg"
+                    alt="Title"
+                  />
+                </div>
+                <small class="card-text text-muted m-0">Text</small>
+                <h6 class="card-title">Title</h6>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span>$13</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$18</span
+                    >
+                  </div>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                </div>
+                <button type="button" class="btn btn-success w-100 p-2 my-3">
+                  + Add to cart
+                </button>
+                <div class="container" style="padding: 11.5px">
+                  <div class="row gap-2 justify-content-center">
+                    <div
+                      class="col-2 border d-flex flex-wrap justify-content-center align-items-center"
+                    >
+                      <span id="days2"></span>
+                      <span class="text-muted" style="font-size: 12px"
+                        >Days</span
+                      >
+                    </div>
+                    <div
+                      class="col-2 border d-flex flex-wrap justify-content-center align-items-center"
+                    >
+                      <span id="hours2"></span>
+                      <span class="text-muted" style="font-size: 12px"
+                        >Hours</span
+                      >
+                    </div>
+                    <div
+                      class="col-3 border d-flex flex-wrap justify-content-center align-items-center"
+                    >
+                      <span id="minutes2"></span>
+                      <span class="text-muted" style="font-size: 12px"
+                        >Minutes</span
+                      >
+                    </div>
+
+                    <div
+                      class="col-3 border d-flex flex-wrap justify-content-center align-items-center"
+                    >
+                      <span id="seconds2"></span>
+                      <span class="text-muted" style="font-size: 12px"
+                        >Seconds</span
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-md-3">
             <div class="card">
-              <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
               <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
+                <div class="text-center">
+                  <img
+                    class="w-75"
+                    src="./img/daily-offers1.jpeg"
+                    alt="Title"
+                  />
+                </div>
+                <small class="card-text text-muted m-0">Text</small>
+                <h6 class="card-title">Title</h6>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span>$13</span>
+                    <span class="text-decoration-line-through text-muted"
+                      >$18</span
+                    >
+                  </div>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                </div>
+                <button type="button" class="btn btn-success w-100 p-2 my-3">
+                  + Add to cart
+                </button>
+                <div class="container" style="padding: 11.5px">
+                  <div class="row gap-2 justify-content-center">
+                    <div
+                      class="col-2 border d-flex flex-wrap justify-content-center align-items-center"
+                    >
+                      <span id="days3"></span>
+                      <span class="text-muted" style="font-size: 12px"
+                        >Days</span
+                      >
+                    </div>
+                    <div
+                      class="col-2 border d-flex flex-wrap justify-content-center align-items-center"
+                    >
+                      <span id="hours3"></span>
+                      <span class="text-muted" style="font-size: 12px"
+                        >Hours</span
+                      >
+                    </div>
+                    <div
+                      class="col-3 border d-flex flex-wrap justify-content-center align-items-center"
+                    >
+                      <span id="minutes3"></span>
+                      <span class="text-muted" style="font-size: 12px"
+                        >Minutes</span
+                      >
+                    </div>
+
+                    <div
+                      class="col-3 border d-flex flex-wrap justify-content-center align-items-center"
+                    >
+                      <span id="seconds3"></span>
+                      <span class="text-muted" style="font-size: 12px"
+                        >Seconds</span
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-3"></div>
-          <div class="col-md-3"></div>
         </div>
       </div>
     </section>
@@ -603,10 +993,12 @@
       </div>
     </section>
 
+    <div class="container p-3"></div>
+
     <!-- spazio -->
     <div
       class="container-fluid parallax-container overlay2"
-      style="height: 20vh; background-image: url(./img/frutta3.jpg)"
+      style="height: 15vh; background-image: url(./img/frutta3.jpg)"
     >
       <div
         class="position-absolute top-50 start-50 translate-middle text-center w-75 text-white d-flex flex-wrap justify-content-center text-light"
@@ -642,17 +1034,26 @@
       </div>
     </div>
 
+    <!-- contatti -->
     <section class="py-5 my-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h3>Vieni a trovarci!</h3>
-            <p class="fs-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum,
-              libero delectus. Quod nulla error, voluptatum atque voluptatibus
-              sequi modi exercitationem!
+          <div class="col-md-4">
+            <h3>Our contacts:</h3>
+            <p class="text-muted pt-3">
+              <i class="bi bi-caret-right-fill"></i>
+              <strong>Tel:</strong> 000-000-0000
+            </p>
+            <p class="text-muted">
+              <i class="bi bi-caret-right-fill"></i>
+              <strong>Address:</strong> Via Santa Marta, 23, 20123 Milano MI
+            </p>
+            <p class="text-muted">
+              <i class="bi bi-caret-right-fill"></i> <strong>Open:</strong> Mon
+              - Sun 00:00 - 00:00
             </p>
           </div>
+          <div class="col-md-2"></div>
           <div class="col-md-6">
             <div id="map"></div>
           </div>
