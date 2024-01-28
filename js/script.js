@@ -1,12 +1,11 @@
 new Swiper("#swiper-1", {
-  effect: "cube",
-  autoplay: {
-    delay: 2500,
+  // autoplay: {
+  //   delay: 2500,
+  // },
+  pagination: {
+    el: "#swiper-1 .swiper-pagination",
+    clickable: true,
   },
-  // pagination: {
-  //     el: "#swiper-1 .swiper-pagination",
-  //     clickable: true
-  // }
 });
 
 const map = L.map("map").setView([45.4615149, 9.1828855], 15);
@@ -59,13 +58,10 @@ L.marker([45.4615149, 9.1828855], { icon: myIcon }).addTo(map);
 new Swiper("#swiper-2", {
   slidesPerView: 6,
   spaceBetween: 20,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button.prev",
+    prevEl: ".swiper-button-prev",
   },
   // autoplay: {
   //   delay: 2900,
@@ -88,3 +84,14 @@ let x = setInterval(function () {
   document.querySelector("#minutes").innerHTML = minutes;
   document.querySelector("#seconds").innerHTML = seconds;
 }, 1000);
+
+const bordoColorato = document.querySelectorAll(".bordo-colorato");
+
+bordoColorato.forEach((element) => {
+  element.addEventListener("mouseover", function () {
+    element.classList.add("border-success");
+  });
+  element.addEventListener("mouseout", function () {
+    element.classList.remove("border-success");
+  });
+});

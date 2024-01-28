@@ -56,9 +56,9 @@ body {
     height: 20vh;
 }
 
-.slide2 {
+/* .slide2 {
     height: 100px !important;
-}
+} */
 
 
 #swiper-2 {
@@ -80,4 +80,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.change-position-prev {
+    top: 60%;
+    left: 80%;
+}
+
+.change-position-next {
+    top: 60%;
+    left: 85%;
 }
