@@ -115,33 +115,23 @@ document.getElementById("registrati").onclick = function (event) {
     nome: nome.value,
     cognome: cognome.value,
     ruolo: "Utente",
-    firma: "Utente",
     tipo: "B",
     nascita: dataNascita.value,
     email: email.value,
     password: passwordUtente.value,
   };
-  sessionStorage.setItem("utenteRegistrato", "true");
 
-  fetch("http://localhost:9012/api/utenti", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(utente),
-  })
-    .then((data) => {
-      return data.json();
-    })
-    .then((res) => {
-      location.href = "1-login.html";
-    });
+  localStorage.setItem("utenteRegistrato", JSON.stringify(utente));
 
-  (nome.value = ""),
-    (cognome.value = ""),
-    (dataNascita.value = ""),
-    (email.value = ""),
-    (passwordUtente.value = ""),
-    (ripetiPassword.value = ""),
-    event.preventDefault();
+  nome.value = "";
+  cognome.value = "";
+  dataNascita.value = "";
+  email.value = "";
+  passwordUtente.value = "";
+  ripetiPassword.value = "";
+
+  document.getElementById("alertRegistration").style.display = "block";
+  setInterval(() => {
+    location.href = "index.html";
+  }, 3000);
 };
