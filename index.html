@@ -74,9 +74,15 @@
                   style="font-size: 12px; color: white; display: none"
                 ></span></span
             ></a>
-            <a href="./registration.html" class="position-relative text-secondary"
+            <!-- <a href="./registration.html" class="position-relative text-secondary"
               ><i class="bi bi-person me-4 fs-4"></i
-            ></a>
+            ></a> -->
+
+            <a href="#">
+              <i class="bi bi-person me-4 fs-4 text-secondary" data-bs-toggle="modal" data-bs-target="#reg-modal"></i
+              >
+              </a>
+
             <a href="" class="position-relative text-secondary">
               <i class="bi bi-cart fs-4 position-relative"></i
               ><span
@@ -90,6 +96,72 @@
         </div>
       </div>
     </section>
+
+    <!-- modal -->
+    <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+          <div class="modal-header border-0 p-0">
+            <h5 class="modal-title fs-1" id="modal-title">Sign In</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-mody py-4 mt-4">
+            <div class="mb-3">
+              <label for="modal-email" class="form-label">Email address</label>
+              <input type="text" class="form-control" id="modal-email" placeholder="Enter Email address">
+            </div>
+            <div class="mb-3">
+              <label for="modal-email" class="form-label">Password</label>
+              <input type="password" class="form-control" id="modal-password" placeholder="Enter Password">
+                <i
+                  class="bi bi-eye-slash position-absolute top-60 end-0 translate-middle-y me-5"
+                  id="hiddenEye"
+                  style="padding-bottom: 2.5rem; cursor: pointer"
+                ></i>
+            </div>
+
+            <div
+                  id="campiFeedback"
+                  class="invalid-feedback"
+                  style="display: none"
+                ></div>
+          </div>
+          <div class="modal-footer border-0 justify-content-start py-2 px-0">
+            <button type="button" class="btn btn-success p-2 px-3" data-bs-dismiss="modal" id="login">Sign In</button>
+            <button type="button" class="btn btn-secondary p-2 px-3" data-bs-dismiss="modal">Close</button>
+          </div>
+          <div class="pt-4 text-center">
+            <span class="text-muted">Don't have an account?
+            <a href="./registration.html" class="text-success" style="text-decoration: none;">Sign Up</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+        class="alert alert-success fs-5 w-25 text-center"
+        role="alert"
+        id="alertLogin"
+        style="
+          position: fixed;
+          z-index: 3;
+          bottom: 10px;
+          right: 10px;
+          display: none;
+        "
+      >
+        <strong>Login success</strong> <br />
+      </div>
+
+       <div
+        class="alert alert-danger fs-5 w-25 text-center custom-alert"
+        role="alert"
+        id="alertError"
+        
+      >
+        <strong>User not found</strong> <br />
+      </div>
+
+
     <nav
       class="navbar navbar-expand-lg mb-4 border-bottom pb-3 mt-sm-3"
       style="

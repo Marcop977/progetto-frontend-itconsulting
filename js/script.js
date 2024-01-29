@@ -198,3 +198,76 @@ document.querySelectorAll(".card-favorite").forEach((card) => {
     event.preventDefault();
   });
 });
+
+// login
+document.getElementById("login").addEventListener("click", verifyAccount);
+
+function verifyAccount(e) {
+  const email = document.querySelector("#modal-email");
+  const password = document.querySelector("#modal-password");
+
+  const user = JSON.parse(localStorage.getItem("utenteRegistrato"));
+
+  if (email.value == user.email && password.value == user.password) {
+    document.querySelector("#alertLogin").style.display = "block";
+    setTimeout(() => {
+      document.querySelector("#alertLogin").style.display = "none";
+    }, 3000);
+    // document.getElementById("login").setAttribute("data-bs-dismiss", "modal");
+  } else {
+    document.querySelector("#alertError").style.display = "block";
+    setTimeout(() => {
+      document.querySelector("#alertError").style.display = "none";
+    }, 3000);
+    e.stopPropagation();
+  }
+}
+
+// const passwordUtente = document.getElementById("modal-password");
+// const ripetiPassword = document.getElementById("ripetiPassword");
+
+// const occhioNascosto = document
+//   .querySelector("#occhioNascosto")
+//   .addEventListener("click", mostraNascondi);
+
+// const occhioNascosto2 = document
+//   .querySelector("#occhioNascosto2")
+//   .addEventListener("click", mostraNascondi);
+
+// function mostraNascondi() {
+//   if (occhioNascosto === this) {
+//     const type =
+//       passwordUtente.getAttribute("type") === "password" ? "text" : "password";
+//     occhioNascosto.classList.toggle("bi-eye");
+//     password.setAttribute("type", type);
+//   } else if (occhioNascosto2 === this) {
+//     const type =
+//       ripetiPassword.getAttribute("type") === "password" ? "text" : "password";
+//     occhioNascosto2.classList.toggle("bi-eye");
+//     // ripetiPassword.setAttribute("type", type);
+//   }
+// }
+
+const userPassword = document.querySelector("#modal-password");
+const hiddenEye = document.querySelector("#hiddenEye");
+
+hiddenEye.addEventListener("click", function (event) {
+  event.stopPropagation();
+  const type =
+    userPassword.getAttribute("type") === "password" ? "text" : "password";
+  hiddenEye.classList.toggle("bi-eye");
+  userPassword.setAttribute("type", type);
+});
+
+document.getElementById("login").addEventListener("click", function (e) {
+  const modalEmail = document.querySelector("#modal-email");
+  const modalPassword = document.querySelector("#modal-password");
+
+  if (modalEmail.value == "" || modalPassword.value == "") {
+    document.querySelector("#campiFeedback").style.display = "block";
+    document.querySelector("#campiFeedback").textContent =
+      "Compila tutti i campi";
+    e.preventDefault();
+    e.stopPropagation();
+  }
+});
