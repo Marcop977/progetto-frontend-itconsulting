@@ -1,8 +1,8 @@
 // primo swiper
 new Swiper("#swiper-1", {
-  // autoplay: {
-  //   delay: 4000,
-  // },
+  autoplay: {
+    delay: 4000,
+  },
   pagination: {
     el: "#swiper-1 .swiper-pagination",
     clickable: true,
@@ -68,9 +68,9 @@ new Swiper("#swiper-2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // autoplay: {
-  //   delay: 4700,
-  // },
+  autoplay: {
+    delay: 4700,
+  },
   loop: true,
 });
 
@@ -91,10 +91,10 @@ setInterval(function () {
   document.querySelector("#seconds").innerHTML = seconds;
 }, 1000);
 
-let countDownDate2 = new Date("6 Feb, 2024 00:00:00").getTime();
+let countDownDate2 = new Date("10 Feb, 2024 23:30:20").getTime();
 setInterval(function () {
   let now = new Date().getTime();
-  let distance = countDownDate - now;
+  let distance = countDownDate2 - now;
 
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -107,10 +107,10 @@ setInterval(function () {
   document.querySelector("#seconds2").innerHTML = seconds;
 }, 1000);
 
-let countDownDate3 = new Date("7 Feb, 2024 00:00:00").getTime();
+let countDownDate3 = new Date("7 Feb, 2024 16:40:35").getTime();
 setInterval(function () {
   let now = new Date().getTime();
-  let distance = countDownDate - now;
+  let distance = countDownDate3 - now;
 
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -146,5 +146,55 @@ scuro.forEach((element) => {
   element.addEventListener("mouseout", function () {
     element.classList.remove("overlay");
     element.style.cursor = "auto";
+  });
+});
+
+// button add
+const btnAdd = document.querySelectorAll("#btn-add");
+
+let i = 1;
+btnAdd.forEach((btn) => {
+  btn.addEventListener("click", function (event) {
+    document.querySelector("#icon-add").style.display = "block";
+    document.querySelector("#icon-add").textContent = i;
+    i++;
+  });
+});
+
+// icon heart
+document.querySelectorAll(".card-favorite").forEach((card) => {
+  card.addEventListener("mouseover", function (event) {
+    event.currentTarget.querySelector("#icon-heart").style.display = "block";
+  });
+});
+
+document.querySelectorAll(".card-favorite").forEach((card) => {
+  card.addEventListener("mouseout", function (event) {
+    event.currentTarget.querySelector("#icon-heart").style.display = "none";
+  });
+});
+
+document.querySelectorAll("#icon-heart").forEach((icon) => {
+  icon.addEventListener("mouseover", function (event) {
+    event.currentTarget.className = "bi bi-heart-fill fs-4 position-absolute";
+  });
+
+  icon.addEventListener("mouseout", function (event) {
+    event.currentTarget.className = "bi bi-heart fs-4 position-absolute";
+  });
+});
+
+let j = 1;
+document.querySelectorAll("#icon-heart").forEach((icon) => {
+  icon.addEventListener("click", function () {
+    document.querySelector("#icon-favorite").style.display = "block";
+    document.querySelector("#icon-favorite").textContent = j;
+    j++;
+  });
+});
+
+document.querySelectorAll(".card-favorite").forEach((card) => {
+  card.addEventListener("click", function (event) {
+    event.preventDefault();
   });
 });

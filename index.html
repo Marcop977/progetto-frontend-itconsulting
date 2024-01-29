@@ -34,7 +34,16 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="pt-4">
+    <section
+      class="pt-4"
+      style="
+        background-color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 13;
+      "
+    >
       <div class="container px-0">
         <div class="row">
           <div class="col-6 col-sm-6 col-md-6 col-lg-2">
@@ -44,7 +53,7 @@
             <div class="input-group">
               <input
                 type="text"
-                class="form-control"
+                class="form-control bg-light"
                 placeholder="Search for products"
               />
               <button
@@ -56,14 +65,42 @@
             </div>
           </div>
           <div class="col-6 col-sm-6 col-md-6 text-end">
-            <i class="bi bi-heart me-4 fs-4"></i>
-            <i class="bi bi-person me-4 fs-4"></i>
-            <i class="bi bi-cart fs-4"></i>
+            <a href="" class="position-relative me-4 text-secondary">
+              <i class="bi bi-heart fs-4"></i
+              ><span
+                class="px-2 bg-success position-absolute cart start-50 top-1 rounded-pill"
+                ><span
+                  id="icon-favorite"
+                  style="font-size: 12px; color: white; display: none"
+                ></span></span
+            ></a>
+            <a href="./registation.html" class="position-relative text-secondary"
+              ><i class="bi bi-person me-4 fs-4"></i
+            ></a>
+            <a href="" class="position-relative text-secondary">
+              <i class="bi bi-cart fs-4 position-relative"></i
+              ><span
+                class="px-2 bg-success position-absolute cart start-50 top-1 rounded-pill"
+                ><span
+                  id="icon-add"
+                  style="font-size: 12px; color: white; display: none"
+                ></span></span
+            ></a>
           </div>
         </div>
       </div>
     </section>
-    <nav class="navbar navbar-expand-lg mb-4 border-bottom py-3 mt-sm-3">
+    <nav
+      class="navbar navbar-expand-lg mb-4 border-bottom pb-3 mt-sm-3"
+      style="
+        background-color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 12;
+        padding-top: 62px;
+      "
+    >
       <div class="container px-0">
         <!-- <a class="navbar-brand" href="#"> -->
         <button
@@ -124,7 +161,7 @@
     </nav>
 
     <!-- primo swiper -->
-    <section id="slider-1" class="mb-5">
+    <section id="slider-1" class="mb-5" style="margin-top: 155px">
       <div class="container px-0">
         <div class="swiper" id="swiper-1">
           <div class="swiper-wrapper">
@@ -218,27 +255,26 @@
       <h3>Featured Categories</h3>
       <div class="swiper-button-next change-position-next">
         <i
-          class="fa-solid fa-angle-right fs-5 text-secondary p-3 rounded-circle bg-light"
-          style="visibility: visible"
+          class="fa-solid fa-angle-right fs-5 text-secondary px-3 rounded-circle bg-light"
+          style="visibility: visible; padding-top: 10px; padding-bottom: 10px;"
         ></i>
       </div>
       <div class="swiper-button-prev change-position-prev">
         <i
-          class="fa-solid fa-angle-left fs-5 text-secondary p-3 rounded-circle bg-light"
-          style="visibility: visible"
+          class="fa-solid fa-angle-left fs-5 text-secondary px-3 rounded-circle bg-light"
+          style="visibility: visible; padding-top: 10px; padding-bottom: 10px;"
         ></i>
       </div>
     </div>
     <div class="swiper mb-5 container" id="swiper-2">
       <div class="swiper-wrapper" style="height: 90%">
         <div
-          id="primaCard"
-          class="swiper-slide border bordo-colorato rounded-4 pt-3 responsive"
+          class="swiper-slide border bordo-colorato rounded-4 pt-3 responsive" style="cursor: pointer"
         >
           <div class="card" style="border: none">
-            <img class="card-img-top" src="./img/slide2-1.jpeg" alt="Title" />
+            <img class="card-img-top mx-auto" src="./img/category-pet-care.jpg" alt="Title" />
             <div class="card-body">
-              <small class="card-text text-muted">Text</small>
+              <small class="card-text text-muted" style="font-size: 13px;">Pet Care</small>
             </div>
           </div>
         </div>
@@ -247,9 +283,9 @@
           style="cursor: pointer"
         >
           <div class="card" style="border: none">
-            <img class="card-img-top" src="./img/slide2-2.jpeg" alt="Title" />
+            <img class="card-img-top w-75 mx-auto" src="./img/category-tea-coffee-drinks.jpg" alt="Title" />
             <div class="card-body">
-              <small class="card-text text-muted">Text</small>
+              <small class="card-text text-muted" style="font-size: 13px;">Tea, Coffee & Drinks</small>
             </div>
           </div>
         </div>
@@ -260,18 +296,40 @@
           <div class="card" style="border: none">
             <img class="card-img-top" src="./img/slide2-3.jpeg" alt="Title" />
             <div class="card-body">
-              <small class="card-text text-muted">Text</small>
+              <small class="card-text text-muted" style="font-size: 13px;">Instant Food</small>
             </div>
           </div>
         </div>
         <div
-          class="swiper-slide border bordo-colorato rounded-4 pt-3 responsive"
+          class="swiper-slide border bordo-colorato rounded-4 responsive"
           style="cursor: pointer"
         >
           <div class="card" style="border: none">
             <img class="card-img-top" src="./img/slide2-4.jpeg" alt="Title" />
             <div class="card-body">
-              <small class="card-text text-muted">Text</small>
+              <small class="card-text text-muted" style="font-size: 13px;">Bakery & Biscuits</small>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide border bordo-colorato rounded-4 pt-2 responsive"
+          style="cursor: pointer"
+        >
+          <div class="card" style="border: none">
+            <img class="card-img-top mx-auto" src="./img/slide2-5.jpeg" alt="Title" style="width: 90%;" />
+            <div class="card-body">
+              <small class="card-text text-muted" style="font-size: 13px;">Snack & Munchies</small>
+            </div>
+          </div>
+        </div>
+        <div
+          class="swiper-slide border bordo-colorato rounded-4 responsive"
+          style="cursor: pointer"
+        >
+          <div class="card" style="border: none">
+            <img class="card-img-top mx-auto" src="./img/slide2-6.jpeg" alt="Title" style="width: 90%;" />
+            <div class="card-body">
+              <small class="card-text text-muted" style="font-size: 13px;">Dairy, Bread & Eggs</small>
             </div>
           </div>
         </div>
@@ -280,31 +338,28 @@
           style="cursor: pointer"
         >
           <div class="card" style="border: none">
-            <img class="card-img-top" src="./img/slide2-5.jpeg" alt="Title" />
+            <img class="card-img-top" src="./img/category-baby-care.jpg" alt="Title" />
             <div class="card-body">
-              <small class="card-text text-muted">Text</small>
+              <small class="card-text text-muted" style="font-size: 13px;">Baby Care</small>
             </div>
           </div>
         </div>
         <div
-          class="swiper-slide border bordo-colorato rounded-4 pt-3 responsive"
+          class="swiper-slide border bordo-colorato rounded-4 pt-2 responsive"
           style="cursor: pointer"
         >
           <div class="card" style="border: none">
-            <img class="card-img-top" src="./img/slide2-6.jpeg" alt="Title" />
+            <img class="card-img-top mx-auto" src="./img/category-chicken-meat-fish.jpg" alt="Title" style="width: 80%;" />
             <div class="card-body">
-              <small class="card-text text-muted">Text</small>
+              <small class="card-text text-muted" style="font-size: 13px;">Chicken, Meat & Fish</small>
             </div>
           </div>
         </div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
       </div>
     </div>
 
     <!-- due col -->
-    <section class="py-5 w-100">
+    <section class="py-2 w-100">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -355,15 +410,21 @@
         <h3 class="pb-4">Popular Products</h3>
         <div class="row justify-content-center">
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <a href="" style="text-decoration: none">
-              <div class="card shadow bordo-colorato">
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
                 <div class="card-body">
                   <img
-                    class="w-100"
+                    class="w-100 position-relative"
                     src="./img/product-img-1.jpg"
                     alt="Title"
                   />
-                  <h4 class="card-title">Title</h4>
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Haldiram's Sev Bhujia</p>
                   <small class="text-warning">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -382,9 +443,13 @@
                       >
                     </div>
                     <div>
-                      <button type="button" class="btn btn-success py-1">
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
                         + Add
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -392,15 +457,21 @@
             </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <a href="" style="text-decoration: none">
-              <div class="card shadow bordo-colorato2">
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
                 <div class="card-body">
                   <img
-                    class="w-100"
+                    class="w-100 position-relative"
                     src="./img/product-img-2.jpg"
                     alt="Title"
                   />
-                  <h4 class="card-title">Title</h4>
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">NutriChoice Digestive</p>
                   <small class="text-warning">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -419,9 +490,13 @@
                       >
                     </div>
                     <div>
-                      <button type="button" class="btn btn-success py-1">
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
                         + Add
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -429,318 +504,477 @@
             </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-3.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-success py-1">
-                      + Add
-                    </button>
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-3.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Cadbury 5 Star Chocolate</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-4.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-5.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-4.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Onion Flavour Potato</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-6.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-5.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Salted Instant Popcorn</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-7.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-1.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Title</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-8.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-9.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-6.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Blueberry Greek Yogurt</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-10.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-7.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Britannia Cheese Slices</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
+          </div>
+           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-1.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Title</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-11.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-8.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Kellogg's Original Cereals</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
-            <div class="card shadow">
-              <div class="card-body">
-                <img class="w-100" src="./img/product-img-12.jpg" alt="Title" />
-                <h4 class="card-title">Title</h4>
-                <small class="text-warning">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-half"></i>
-                  <span class="text-muted small">4.5(149)</span>
-                </small>
-                <div
-                  class="d-flex h-100 justify-content-between align-items-center pt-2"
-                >
-                  <div>
-                    <span class="text-dark">$18</span>
-                    <span class="text-decoration-line-through text-muted"
-                      >$24</span
-                    >
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-primary py-1">
-                      + Add
-                    </button>
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-9.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Slurrp Millet Chocolate</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-        </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 mb-5">
+            <a href="" style="text-decoration: none; color: black">
+              <div class="card shadow bordo-colorato card-favorite">
+                <div class="card-body">
+                  <img
+                    class="w-100 position-relative"
+                    src="./img/product-img-10.jpg"
+                    alt="Title"
+                  />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 155px; top: 10px; display: none"
+                  ></i>
+                  <small class="text-secondary">Snack & Munchies</small>
+                  <p class="card-title">Amul Butter - 500 g</p>
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <span class="text-muted small">4.5(149)</span>
+                  </small>
+                  <div
+                    class="d-flex h-100 justify-content-between align-items-center pt-2"
+                  >
+                    <div>
+                      <span class="text-dark">$18</span>
+                      <span class="text-decoration-line-through text-muted"
+                        >$24</span
+                      >
+                    </div>
+                    <div>
+                      <a
+                        id="btn-add"
+                        type="button"
+                        class="btn btn-success py-1"
+                      >
+                        + Add
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+         
+          
       </div>
     </section>
 
@@ -769,17 +1003,22 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 responsive4">
-            <div class="card">
+            <div class="card card-favorite" style="cursor: pointer;">
               <div class="card-body">
                 <div class="text-center">
                   <img
-                    class="w-75"
+                    class="w-75 position-relative"
                     src="./img/daily-offers1.jpeg"
                     alt="Title"
                   />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 265px; top: 10px; display: none"
+                  ></i>
                 </div>
                 <small class="card-text text-muted m-0">Text</small>
-                <h6 class="card-title">Title</h6>
+                <p class="card-title">Title</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
                     <span>$13</span>
@@ -796,7 +1035,7 @@
                     <span class="text-muted small">4.5(149)</span>
                   </small>
                 </div>
-                <button type="button" class="btn btn-success w-100 p-2 my-3">
+                <button id="btn-add" type="button" class="btn btn-success w-100 p-2 my-3">
                   + Add to cart
                 </button>
                 <div class="container" style="padding: 11.5px">
@@ -840,14 +1079,19 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 responsive3">
-            <div class="card">
+            <div class="card card-favorite" style="cursor: pointer;">
               <div class="card-body">
                 <div class="text-center">
                   <img
-                    class="w-75"
-                    src="./img/daily-offers1.jpeg"
+                    class="w-75 position-relative"
+                    src="./img/product-img-12.jpg"
                     alt="Title"
                   />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 265px; top: 10px; display: none"
+                  ></i>
                 </div>
                 <small class="card-text text-muted m-0">Text</small>
                 <h6 class="card-title">Title</h6>
@@ -867,7 +1111,7 @@
                     <span class="text-muted small">4.5(149)</span>
                   </small>
                 </div>
-                <button type="button" class="btn btn-success w-100 p-2 my-3">
+                <button id="btn-add" type="button" class="btn btn-success w-100 p-2 my-3">
                   + Add to cart
                 </button>
                 <div class="container" style="padding: 11.5px">
@@ -911,14 +1155,19 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 responsive3">
-            <div class="card">
+            <div class="card card-favorite" style="cursor: pointer">
               <div class="card-body">
                 <div class="text-center">
                   <img
-                    class="w-75"
-                    src="./img/daily-offers1.jpeg"
+                    class="w-75 position-relative"
+                    src="./img/product-img-13.jpg"
                     alt="Title"
                   />
+                  <i
+                    id="icon-heart"
+                    class="bi bi-heart fs-4 position-absolute"
+                    style="left: 265px; top: 10px; display: none"
+                  ></i>
                 </div>
                 <small class="card-text text-muted m-0">Text</small>
                 <h6 class="card-title">Title</h6>
@@ -938,7 +1187,7 @@
                     <span class="text-muted small">4.5(149)</span>
                   </small>
                 </div>
-                <button type="button" class="btn btn-success w-100 p-2 my-3">
+                <button id="btn-add" type="button" class="btn btn-success w-100 p-2 my-3">
                   + Add to cart
                 </button>
                 <div class="container" style="padding: 11.5px">
@@ -999,26 +1248,23 @@
           </div>
           <div class="col-md-3 responsive4">
             <i class="bi bi-gift fs-1 text-success"></i>
-            <h5>10 minute grocery now</h5>
+            <h5>Best Prices & Offers</h5>
             <p class="text-muted">
-              Get your order delivered to your doorstep at the earliest from
-              FreshCart pickup stores near you.
+              Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers.
             </p>
           </div>
           <div class="col-md-3 responsive4">
             <i class="bi bi-box-seam fs-1 text-success"></i>
-            <h5>10 minute grocery now</h5>
+            <h5>Wide Assortment</h5>
             <p class="text-muted">
-              Get your order delivered to your doorstep at the earliest from
-              FreshCart pickup stores near you.
+              Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.
             </p>
           </div>
           <div class="col-md-3 responsive4">
             <i class="bi bi-arrow-repeat fs-1 text-success"></i>
-            <h5>10 minute grocery now</h5>
+            <h5>Easy Returns</h5>
             <p class="text-muted">
-              Get your order delivered to your doorstep at the earliest from
-              FreshCart pickup stores near you.
+              Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked <a href="" style="text-decoration: none;" class="text-success">policy</a>.
             </p>
           </div>
         </div>
