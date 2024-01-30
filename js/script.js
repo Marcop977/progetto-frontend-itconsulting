@@ -207,7 +207,11 @@ document.getElementById("login").addEventListener("click", function (e) {
     document.querySelector("#campiFeedback").style.display = "block";
     document.querySelector("#campiFeedback").textContent =
       "Compila tutti i campi";
-    e.preventDefault();
-    e.stopPropagation();
+  } else {
+    document.querySelector("#login").setAttribute("data-bs-dismiss", "modal");
+    document.querySelector("#alertLogin").style.display = "block";
+    setTimeout(() => {
+      document.querySelector("#alertLogin").style.display = "none";
+    }, 3000);
   }
 });
