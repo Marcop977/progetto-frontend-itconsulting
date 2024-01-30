@@ -179,7 +179,7 @@ function verifyAccount(e) {
     setTimeout(() => {
       document.querySelector("#alertLogin").style.display = "none";
     }, 3000);
-  } else {
+  } else if (email.value != user.email && password.value != user.password && email.value != "" && password.value != ""){
     document.querySelector("#alertError").style.display = "block";
     setTimeout(() => {
       document.querySelector("#alertError").style.display = "none";
@@ -208,6 +208,7 @@ document.getElementById("login").addEventListener("click", function (e) {
     document.querySelector("#campiFeedback").textContent =
       "Compila tutti i campi";
   } else {
+    document.querySelector("#campiFeedback").style.display = "none";
     document.querySelector("#login").setAttribute("data-bs-dismiss", "modal");
     document.querySelector("#alertLogin").style.display = "block";
     setTimeout(() => {
