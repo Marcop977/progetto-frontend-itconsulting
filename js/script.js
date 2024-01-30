@@ -1,23 +1,13 @@
 // primo swiper
 new Swiper("#swiper-1", {
-  autoplay: {
-    delay: 4000,
-  },
-  pagination: {
-    el: "#swiper-1 .swiper-pagination",
-    clickable: true,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  // },
   loop: true,
 });
 
+//mappa
 const map = L.map("map").setView([45.4615149, 9.1828855], 15);
-
-// mappa
-const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-});
-osm.addTo(map);
 
 googleStreets = L.tileLayer(
   "http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}",
@@ -35,30 +25,6 @@ let myIcon = L.icon({
 
 L.marker([45.4615149, 9.1828855], { icon: myIcon }).addTo(map);
 
-// 2 swiper
-// const swiper = new Swiper('#swiper-2', {
-//     slidesPerView: 3,
-//     centeredSlides: true,
-//     spaceBetween: 30,
-//     pagination: {
-//       el: '.swiper-pagination',
-//       type: 'fraction',
-//     },
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//     virtual: {
-//       slides: (function () {
-//         const slides = [];
-//         for (var i = 0; i < 600; i += 1) {
-//           slides.push(`<a href=""><img class="" src="./img/slide2-${(i + 1)}.jpeg" alt=""></a>`);
-//         }
-//         return slides;
-//       })(),
-//     },
-// });
-
 // secondo swiper
 new Swiper("#swiper-2", {
   slidesPerView: 6,
@@ -68,9 +34,9 @@ new Swiper("#swiper-2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  autoplay: {
-    delay: 4700,
-  },
+  // autoplay: {
+  //   delay: 4700,
+  // },
   loop: true,
 });
 
@@ -79,7 +45,7 @@ let countDownDate = new Date("5 Feb, 2024 00:00:00").getTime();
 setInterval(function () {
   let now = new Date().getTime();
   let distance = countDownDate - now;
-
+  
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -124,9 +90,9 @@ setInterval(function () {
 }, 1000);
 
 // bordo colorato
-const bordoColorato = document.querySelectorAll(".bordo-colorato");
+const coloredBorder = document.querySelectorAll(".colored-border");
 
-bordoColorato.forEach((element) => {
+coloredBorder.forEach((element) => {
   element.addEventListener("mouseover", function () {
     element.classList.add("border-success");
   });
@@ -213,7 +179,6 @@ function verifyAccount(e) {
     setTimeout(() => {
       document.querySelector("#alertLogin").style.display = "none";
     }, 3000);
-    // document.getElementById("login").setAttribute("data-bs-dismiss", "modal");
   } else {
     document.querySelector("#alertError").style.display = "block";
     setTimeout(() => {
@@ -222,31 +187,6 @@ function verifyAccount(e) {
     e.stopPropagation();
   }
 }
-
-// const passwordUtente = document.getElementById("modal-password");
-// const ripetiPassword = document.getElementById("ripetiPassword");
-
-// const occhioNascosto = document
-//   .querySelector("#occhioNascosto")
-//   .addEventListener("click", mostraNascondi);
-
-// const occhioNascosto2 = document
-//   .querySelector("#occhioNascosto2")
-//   .addEventListener("click", mostraNascondi);
-
-// function mostraNascondi() {
-//   if (occhioNascosto === this) {
-//     const type =
-//       passwordUtente.getAttribute("type") === "password" ? "text" : "password";
-//     occhioNascosto.classList.toggle("bi-eye");
-//     password.setAttribute("type", type);
-//   } else if (occhioNascosto2 === this) {
-//     const type =
-//       ripetiPassword.getAttribute("type") === "password" ? "text" : "password";
-//     occhioNascosto2.classList.toggle("bi-eye");
-//     // ripetiPassword.setAttribute("type", type);
-//   }
-// }
 
 const userPassword = document.querySelector("#modal-password");
 const hiddenEye = document.querySelector("#hiddenEye");
