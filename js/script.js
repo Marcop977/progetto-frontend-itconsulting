@@ -1,8 +1,8 @@
 // primo swiper
 new Swiper("#swiper-1", {
-  // autoplay: {
-  //   delay: 4000,
-  // },
+  autoplay: {
+    delay: 4000,
+  },
   loop: true,
 });
 
@@ -34,9 +34,9 @@ new Swiper("#swiper-2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // autoplay: {
-  //   delay: 4700,
-  // },
+  autoplay: {
+    delay: 4700,
+  },
   loop: true,
 });
 
@@ -45,7 +45,7 @@ let countDownDate = new Date("5 Feb, 2024 00:00:00").getTime();
 setInterval(function () {
   let now = new Date().getTime();
   let distance = countDownDate - now;
-  
+
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -179,7 +179,12 @@ function verifyAccount(e) {
     setTimeout(() => {
       document.querySelector("#alertLogin").style.display = "none";
     }, 3000);
-  } else if (email.value != user.email && password.value != user.password && email.value != "" && password.value != ""){
+  } else if (
+    email.value != user.email &&
+    password.value != user.password &&
+    email.value != "" &&
+    password.value != ""
+  ) {
     document.querySelector("#alertError").style.display = "block";
     setTimeout(() => {
       document.querySelector("#alertError").style.display = "none";
